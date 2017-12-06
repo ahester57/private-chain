@@ -1,0 +1,15 @@
+./*/geth
+*/geth
+./*/keystore
+*/keystore
+./*/passwd.sec
+*/passwd.sec
+./*/*static*
+*/*static*
+./*/geth.ipc
+*/geth.ipc
+./*/history
+*/history
+./genesis*
+genesis*
+./*/*/truf*
