@@ -7,19 +7,23 @@ Contains scripts and whatnot for running a private ethereum blockchain
 ### Prerequisites
 
 	> go-ethereum (geth)
-	> go.1.8.x+
+	> go.1.8+
 	
 ### Installation
 
 go-ethereum:  
 follow instructions at https://github.com/ethereum/go-ethereum  
 
-go.1.8.x+:
+go.1.8+:
 
-	> wget  
-	> https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz  
-	> tar -xzf go1.8.3.linux-amd64.tar.gz -C /usr/local
-	> add /usr/local/go/bin to $PATH in .bashrc
+	> sudo add-apt-repository ppa:gophers/archive
+	> sudo apt update
+	> sudo apt install golang-1.[8|9]
+	> //add /usr/lib/go/bin to $PATH in .bashrc
+	> echo PATH=/usr/lib/go/bin:$PATH >> .bashrc
+
+!!!! DON'T FORGET !!!!  >> 
+
 
 ### Running
 
@@ -37,8 +41,8 @@ To begin:
 	> ./generate_genesis.sh
 	> Configure your genesis to your liking
 	> ./initialize_chain.sh
-	> Make 2 accounts for each of the three nodes.
-	> geth --datadir ./<nodename> account new (*2)
+	> ./create_account.sh
+	> ./unlock_on_start.sh
 	> ./get_enodes.sh
 	> ./copy_static_nodes.sh
 	

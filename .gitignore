@@ -13,3 +13,5 @@
 ./genesis*
 genesis*
 ./*/*/truf*
+*.swp
+*~
