@@ -2,6 +2,8 @@
 # by Austin Hester
 
 CURR=`dirname $0`
+if [[ -d $CURR/enode/ ]]
+then
 echo "I will back up your old file."
 read -p "Are you sure you want to overwrite static-nodes? (yes/no):" -r
 echo
@@ -22,10 +24,13 @@ if [ -e $CURR/enode/new-static-nodes.json ]; then
 	echo "copying to" $MINER2 &&
 	cp $CURR/enode/static-nodes.json $MINER2
 else
-	echo "Please initialize and run get_enodes.sh"
+	echo "Please initialize and run ./get_enodes.sh"
 fi
 else
 	echo "quiting..."
+fi
+else
+	echo "Initialize first and run ./get_enodes.sh"
 fi
 
 

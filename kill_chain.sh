@@ -6,6 +6,9 @@
 # this script:
 # > looks for geth's, kills it
 
+GETH=`ps -a | grep geth | awk 'NR==1{ print $1 }'`
+if [[ $GETH != "" ]]
+then
 read -p "Are you sure you want to kill running geth instances? (yes/no):" -r
 echo
 if [[ $REPLY == "yes" ]]
@@ -19,4 +22,7 @@ then
 	done
 else
 	echo "cancelling"
+fi
+else
+	echo "No running instances."
 fi

@@ -7,14 +7,14 @@ Contains scripts and whatnot for running a private ethereum blockchain
 ### Prerequisites
 
 	> go-ethereum (geth)
-	> go.1.8.x
+	> go.1.8.x+
 	
 ### Installation
 
 go-ethereum:  
 follow instructions at https://github.com/ethereum/go-ethereum  
 
-go.1.8.x:
+go.1.8.x+:
 
 	> wget  
 	> https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz  

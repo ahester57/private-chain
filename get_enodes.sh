@@ -4,11 +4,15 @@
 # get enodes
 
 CURR=`dirname $0`
+BOOT=$CURR/bootstrap
+MINER1=$CURR/miner1
+MINER2=$CURR/miner2
+if [[ -d $BOOT/geth/ && -d $MINER1/geth/ && -d $MINER2/geth/ ]] 
+then
 IPPREFIX=`ip route | grep default | awk -F " " '{print $3 }' | awk '{print substr($1,1,4) }'`
 IP=`ifconfig | grep $IPPREFIX | awk -F: '{ print $2 }' | awk -F " " '{ print $1 }'`
 echo $IP
 # bootstrap node
-BOOT=$CURR/bootstrap
 if [ -d $BOOT/geth/ ]; then
 	BOOTIPC=/home/$USER/.ethereum/geth.ipc
 	if [ -e $BOOTIPC ]; then
@@ -21,7 +25,6 @@ else
 	echo "bootstrap not initialized."
 fi
 # miner 1
-MINER1=$CURR/miner1
 if [ -d $MINER1/geth/ ]; then
 	if [ -e $MINER1/geth.ipc ]; then
 		M1ENODE=`geth --exec admin.nodeInfo.enode attach $MINER1/geth.ipc`
@@ -33,7 +36,6 @@ else
 	echo "miner1 not initialized."
 fi
 # miner 2
-MINER2=$CURR/miner2
 if [ -d $MINER2/geth/ ]; then
 	if [ -e $MINER2/geth.ipc ]; then
 		M2ENODE=`geth --exec admin.nodeInfo.enode attach $MINER2/geth.ipc`
@@ -64,3 +66,7 @@ echo
 echo "Wrote enodes to "$CURR"/enode/new-static-nodes.json"
 echo "Run "$CURR"/copy_static_nodes.sh to update"
 echo
+
+else
+	echo "Initialize first"
+fi

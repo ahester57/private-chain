@@ -4,6 +4,7 @@
 # Initializes geth chain with genesis.json
 
 CURR=`dirname $0`
+if [ -e $CURR/genesis.json ]; then
 read -p "Are you sure you want to initialize the chain? (yes/no):" -r
 echo
 if [[ $REPLY == "yes" ]]
@@ -40,4 +41,8 @@ then
 	fi
 else
 	echo "quitting"
+fi
+else
+	echo "File "$CURR/genesis.json" not found."
+	echo "Generate genesis.json by running ./generate_genesis.sh"
 fi

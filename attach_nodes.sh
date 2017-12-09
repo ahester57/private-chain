@@ -4,6 +4,9 @@
 # Attach nodes
 
 CURR=`dirname $0`
+
+if [[ -d $BOOT/geth/ && -d $MINER1/geth/ && -d $MINER2/geth/ ]]
+then
 # bootstrap node
 read -p "Which node do you want to connect to? (b/1/2) : " -r
 echo
@@ -49,4 +52,6 @@ else
 	echo "miner2 not initialized."
 fi
 fi
-
+else
+	echo "You must initialize the chain first"
+fi
