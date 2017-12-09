@@ -4,6 +4,9 @@
 # Attach nodes
 
 CURR=`dirname $0`
+BOOT=$CURR/bootstrap
+MINER1=$CURR/miner1
+MINER2=$CURR/miner2
 
 if [[ -d $BOOT/geth/ && -d $MINER1/geth/ && -d $MINER2/geth/ ]]
 then
@@ -11,7 +14,6 @@ then
 read -p "Which node do you want to connect to? (b/1/2) : " -r
 echo
 if [ $REPLY == "b" ]; then
-	BOOT=$CURR/bootstrap
 if [ -d $BOOT/geth/ ]; then
 	BOOTIPC=/home/$USER/.ethereum/geth.ipc
 	if [ -e $BOOTIPC ]; then
@@ -26,7 +28,6 @@ fi
 fi
 # miner 1
 if [ $REPLY == "1" ]; then
-	MINER1=$CURR/miner1
 if [ -d $MINER1/geth/ ]; then
 	if [ -e $MINER1/geth.ipc ]; then
 		echo "Attaching"
@@ -40,7 +41,6 @@ fi
 fi
 # miner 2
 if [ $REPLY == "2" ]; then
-MINER2=$CURR/miner2
 if [ -d $MINER2/geth/ ]; then
 	if [ -e $MINER2/geth.ipc ]; then
 		echo "Attaching"
