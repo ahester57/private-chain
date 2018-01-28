@@ -63,8 +63,10 @@ echo $M1ENODE"," >> $CURR/enode/new-static-nodes.json
 echo $M2ENODE >> $CURR/enode/new-static-nodes.json
 echo "]" >> $CURR/enode/new-static-nodes.json
 echo
+echo "If this isn't your private ip change that unless you're bold."
 echo "Wrote enodes to "$CURR"/enode/new-static-nodes.json"
 echo "Run "$CURR"/copy_static_nodes.sh to update"
+echo "Done."
 echo
 
 else

@@ -34,6 +34,7 @@ if [ $REPLY == "yes" ]; then
 	echo "}" >> $CURR/genesis.json
 	echo "}" >> $CURR/genesis.json
 	echo "Wrote to " $CURR"/genesis.json"
+	"Done."
 else
 	echo "quitting"
 fi

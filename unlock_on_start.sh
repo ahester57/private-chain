@@ -41,6 +41,7 @@ then
 	echo
 	echo $REPLY > $MINER2/passwd.sec
 	chmod 600 $MINER2/passwd.sec
+	echo "Done."
 else
 	echo "quitting"
 fi

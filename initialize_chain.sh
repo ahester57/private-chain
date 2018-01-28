@@ -39,6 +39,7 @@ then
 	else
 		echo "miner2 already initialized."
 	fi
+	echo "Done."
 else
 	echo "quitting"
 fi

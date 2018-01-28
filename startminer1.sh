@@ -7,8 +7,7 @@ geth --identity "miner1" --networkid 9111 \
      --ipcpath $CURR/miner1/geth.ipc \
      --nodiscover --port "39910" --rpc --rpcport "42025" \
      --rpcapi "db,eth,web3,net,personal,miner" \
-     --unlock 0 --password $CURR/miner1/passwd.sec \
-     --mine  
+     --unlock 0 --password $CURR/miner1/passwd.sec --mine
 else
 	echo "Initialize first"
 fi

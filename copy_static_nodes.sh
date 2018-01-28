@@ -23,6 +23,7 @@ if [ -e $CURR/enode/new-static-nodes.json ]; then
 	cp $CURR/enode/static-nodes.json $MINER1 &&
 	echo "copying to" $MINER2 &&
 	cp $CURR/enode/static-nodes.json $MINER2
+	echo "Done."
 else
 	echo "Please initialize and run ./get_enodes.sh"
 fi

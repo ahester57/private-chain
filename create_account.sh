@@ -95,6 +95,8 @@ then
 	fi
 	done	
 	rm -f tmpasdf
+	echo "if you messed up just manually add until there are two each."
+	echo "Done."
 else
 	echo "quitting"
 fi
