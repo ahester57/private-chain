@@ -17,9 +17,9 @@ if [ $REPLY == "yes" ]; then
   	echo "  \"alloc\"      : {}," >> $CURR/genesis.json
   	echo "  \"coinbase\"   :	\"0x0000000000000000000000000000000000000000\"," \
 	>> $CURR/genesis.json
-	echo "  \"difficulty\" : \"0x20000\"," >> $CURR/genesis.json
+	echo "  \"difficulty\" : \"0x920000\"," >> $CURR/genesis.json
 	echo "  \"extraData\"  : \"\"," >> $CURR/genesis.json
-	echo "  \"gasLimit\"   : \"0x2fefd8\"," >> $CURR/genesis.json
+	echo "  \"gasLimit\"   : \"0xff2fefd8\"," >> $CURR/genesis.json
 	echo "  \"nonce\"      : \"0x0000004200000042\"," >> $CURR/genesis.json
 	echo "  \"mixhash\"    :	\"0x0000000000000000000000000000000000000000000000000000000000000000\"," \
 	>> $CURR/genesis.json
@@ -27,7 +27,7 @@ if [ $REPLY == "yes" ]; then
 	>> $CURR/genesis.json
 	echo "  \"timestamp\"  : \"0x00\"," >> $CURR/genesis.json
 	echo "  \"config\" : {" >> $CURR/genesis.json
-		echo "    \"chainId\": 0," >> $CURR/genesis.json
+		echo "    \"chainId\": <arbitraty, not 1>," >> $CURR/genesis.json
 		echo "    \"homesteadBlock\" : 0," >> $CURR/genesis.json
 		echo "    \"eip155Block\": 0," >> $CURR/genesis.json
 		echo "    \"eip158Block\": 0" >> $CURR/genesis.json
