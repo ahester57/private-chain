@@ -31,6 +31,6 @@ contract SmartToken {
 
 	function add12(uint value)
 	public pure returns (uint newvalue) {
-		return value + 13;
+		return value + 12;
 	}
 }

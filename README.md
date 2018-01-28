@@ -3,35 +3,47 @@
 
 Contains scripts and whatnot for running a private ethereum blockchain
 
-
 ### Prerequisites
 
-	> go-ethereum (geth)
-	> go.1.8+
+	> go-ethereum-1.7.3-stable (geth)
+	> go-1.8+
+	> nodejs-1.8+
+	> [optional] Mist browser
 	
 ### Installation
 
 go-ethereum:  
-follow instructions at https://github.com/ethereum/go-ethereum  
+
+Follow instructions at https://github.com/ethereum/go-ethereum   
+The latest release [1.8.0-unstable], is, well, unstable.  
+Get [1.7.3-stable].
 
 go.1.8+:
 
 	> sudo add-apt-repository ppa:gophers/archive
 	> sudo apt update
 	> sudo apt install golang-1.[8|9]
-	> //add /usr/lib/go/bin to $PATH in .bashrc
-	> echo PATH=/usr/lib/go/bin:$PATH >> .bashrc
+	> echo "PATH=/usr/lib/go/bin:$PATH" >> ~/.bashrc
 
-!!!! DON'T FORGET !!!!  >> 
+nodejs-1.8+
 
+	> curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+	> sudo apt update
+	> sudo apt install nodejs npm
+	
+[optional] Mist browser
+
+	> git clone https://github.com/ethereum/mist.git
+	> cd mist
+	> curl -o- -L https://yarnpkg.com/install.sh | bash
+	> curl https://install.meteor.com/ | sh
+	> yarn global add electron
+	> yarn global add gulp
+	> yarn
 
 ### Running
 
 Make sure your genesis is how you want it. 
-
-
-Put password for first account (coinbase) in each node's datadir in a file
-called passwd.sec with correct perms.
 
 Take note of or change the ports each node uses.
 
@@ -58,4 +70,18 @@ In this console, type:
 
 If nothing appears, make sure you ip and ports are correct and run
 ```./get_endodes.sh && ./copy_static_nodes.sh``` again
+
+### Mist browser
+
+To run mist browser, run the following commands:
+
+	> cd mist/interface
+	> meteor --no-release-check
+
+This opens a server on localhost:3000. To now open the GUI:  
+Open a new terminal window,
+
+	> cd mist
+	> yarn dev:electron --mode mist --rpc http://localhost:<rpc_port> \
+	> --swarmurl "null" --node-networkid <network_id>
 
