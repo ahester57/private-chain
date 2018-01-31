@@ -8,6 +8,7 @@ Contains scripts and whatnot for running a private ethereum blockchain
 	> go-ethereum-1.7.3-stable (geth)
 	> go-1.8+
 	> nodejs-1.8+
+	> truffle
 	> [optional] Mist browser
 	
 ### Installation
@@ -84,4 +85,13 @@ Open a new terminal window,
 	> cd mist
 	> yarn dev:electron --mode mist --rpc http://localhost:<rpc_port> \
 	> --swarmurl "null" --node-networkid <network_id>
+
+### Truffle
+
+Truffle is a development environment for writing smart contracts 
+for the Ethereum Virtual Machine.
+
+Check it out at
+
+http://truffleframework.com/docs/getting_started/installation
 
