@@ -1,13 +1,39 @@
 pragma solidity ^0.4.0;
 
 
-contract ArrayContract {
-    uint[2**20] m_lotOfIntegers;
+contract Owned {
+    address public owner;
+    
+    function Owned() public {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner {
+        require(msg.sender == owner);
+        _;
+    }
+
+    function transferOwnership(address newOwner)
+        public
+        onlyOwner()
+    {
+        owner = newOwner;
+    }
+}
+
+
+contract ArrayContract is Owned {
+    uint[2**20] mLotOfIntegers;
     // The following is a dynamic array of pairs
-    bool[2][] m_pairsOfFlags;
+    bool[2][] mPairsOfFlags;
+
+    function ArrayContract() public {
+        if (owner != 0)
+            owner = msg.sender;
+    }
 
     function setAllFlagPairs(bool[2][] newPairs) public {
-        m_pairsOfFlags = newPairs;
+        mPairsOfFlags = newPairs;
     }
 
     function setFlagPair(
@@ -15,35 +41,35 @@ contract ArrayContract {
         bool flagA,
         bool flagB
     ) public {
-        m_pairsOfFlags[index][0] = flagA;
-        m_pairsOfFlags[index][1] = flagB;
+        mPairsOfFlags[index][0] = flagA;
+        mPairsOfFlags[index][1] = flagB;
     }
 
     function changeFlagArraySize(uint newSize) public {
-        m_pairsOfFlags.length = newSize;
+        mPairsOfFlags.length = newSize;
     }
 
     function clear() public {
         // clear the arrays completely
-        delete m_pairsOfFlags;
-        delete m_lotOfIntegers;
+        delete mPairsOfFlags;
+        delete mLotOfIntegers;
         // 'identical' effect here
-        m_pairsOfFlags.length = 0;
+        mPairsOfFlags.length = 0;
     }
 
-    bytes m_byteData;
+    bytes mByteData;
 
     function byteArrays(bytes data) public {
         // 'bytes' are stored without padding
         // but can be treated as 'uint8[]'
-        m_byteData = data;
-        m_byteData.length += 7;
-        m_byteData[3] = byte(8);
-        delete m_byteData[2];
+        mByteData = data;
+        mByteData.length += 7;
+        mByteData[3] = byte(8);
+        delete mByteData[2];
     }
 
     function addFlag(bool[2] flag) public returns (uint) {
-        return m_pairsOfFlags.push(flag);
+        return mPairsOfFlags.push(flag);
     }
 
     function createMemoryArray(uint size) public pure
