@@ -1,0 +1,18 @@
+{
+  "alloc"      : {},
+  "coinbase"   :	"0x020000040143000090000aa00000c00000a00000",
+  "difficulty" : "0x1f000",
+  "gasLimit"   : "0xffffffffffffff",
+  "nonce"      : "0x133abfa2c8a2d869",
+  "mixhash"    :
+  "0x0000000f000004000300000000300000a0800000000000a00000000000000000",
+  "parentHash"
+  :"0x000300f00000000f0000d0000a0000000000000000000a000000000000000000",
+  "timestamp"  : "0x00",
+  "config" : {
+    "chainId": 9111,
+    "homesteadBlock" : 0,
+    "eip155Block": 0,
+    "eip158Block": 0
+}
+}
