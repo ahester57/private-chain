@@ -15,4 +15,6 @@ genesis*
 *~
 ./Projects/*
 sync.html
-
+.testnode/*
+testnode/*
+testnode/*/*
