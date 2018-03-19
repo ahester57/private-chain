@@ -19,3 +19,5 @@ eth.mining
 miner.start(1)
 miner.start()
 web3.fromWei(eth.getBalance(eth.coinbase))
+miner.start()
+web3.fromWei(eth.getBalance(eth.coinbase))

@@ -10,3 +10,6 @@ web3.fromWei(eth.getBalance(eth.coinbase))
 miner.stop()
 loadScript('mine_on_demand.js')
 eth.mining
+ls
+miner.start()
+web3.fromWei(eth.getBalance(eth.coinbase))

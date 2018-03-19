@@ -8,7 +8,7 @@ geth --identity "miner2" --networkid 9111 \
      --nodiscover --port "39911" --rpc --rpcport "42026" \
      --rpcapi "db,eth,web3,net,personal,miner" \
      --unlock 0 --password $CURR/miner2/passwd.sec \
- --preload $CURR/mine_on_demand.js console
+	 --preload $CURR/mine_on_demand.js console
 else
 	echo "Initialize first"
 fi
