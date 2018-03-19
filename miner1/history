@@ -21,3 +21,5 @@ miner.start()
 web3.fromWei(eth.getBalance(eth.coinbase))
 miner.start()
 web3.fromWei(eth.getBalance(eth.coinbase))
+eth.blockNumber
+admin.peers
