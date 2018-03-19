@@ -9,7 +9,7 @@ geth --identity "bootstrap" --networkid 9111 \
      --port "39909" --rpc --rpcport "42024" \
      --rpcapi "db,eth,web3,net,personal,miner" \
      --unlock 0 --password $CURR/bootstrap/passwd.sec \
-     --preload "mine_on_demand.js" \
+     --preload "$CURR/scripts/mine_on_demand.js" \
 	 console
 else
 	echo "Initialize first"
