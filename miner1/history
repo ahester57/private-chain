@@ -23,3 +23,22 @@ miner.start()
 web3.fromWei(eth.getBalance(eth.coinbase))
 eth.blockNumber
 admin.peers
+web3.fromWei(eth.getBalance(eth.coinbase))
+eth.sendTransaction({from: eth.coinbase, to: "0x0b13f41a6ce1290c8295dd8f90fb809e03260df2", value: web3.toWei(10, "ether")});
+web3.fromWei(eth.getBalance(eth.coinbase))
+admin.peers
+eth.sendTransaction({from: eth.coinbase, to: "0x0b13f41a6ce1290c8295dd8f90fb809e03260df2", value: web3.toWei(10, "ether")});
+admin.peers
+eth.sendTransaction({from: eth.coinbase, to: "0x0b13f41a6ce1290c8295dd8f90fb809e03260df2", value: web3.toWei(10, "ether")});
+admin.peers
+eth.blockNumber
+admin.peers
+miner.start()
+admin.peers
+miner.start()
+admin.peers
+eth.sendTransaction({from: eth.coinbase, to: "0x0b13f41a6ce1290c8295dd8f90fb809e03260df2", value: web3.toWei(10, "ether")});
+eth.blockNumber
+admin.peers
+eth.blockNumber
+admin.peers
