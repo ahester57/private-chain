@@ -18,8 +18,8 @@ geth --identity $IDENTITY --networkid $NETWORKID \
      --nodiscover --port $UDPPORT --rpc --rpcport $RPCPORT \
      --rpcapi "db,eth,web3,net,personal,miner" \
      --unlock 0 --password $DATADIR/passwd.sec \
-	 --preload "$CURR/scripts/loadIoTCoin.js" \
-	 --preload "$CURR/scripts/loadChainMessage.js" \
+	 --preload "$CURR/scripts/loadIoTCoin.js", \
+	 "$CURR/scripts/loadChainMessage.js" \
 	console
      #--unlock $COINBASE --password $DATADIR/passwd.sec \
 else
