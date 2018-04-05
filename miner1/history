@@ -42,3 +42,14 @@ eth.blockNumber
 admin.peers
 eth.blockNumber
 admin.peers
+loadScript('scripts/loadChainMessage.js')
+var ChainMessage = loadChainMessage()
+ls
+ChainMessage
+ChainMessage.getMessage(eth.coinbase)
+eth.coinbase
+loadScript('scripts/loadChainMessage.js')
+var ChainMessage = loadChainMessage()
+ChainMessage.getMessage(eth.coinbase)
+ChainMessage
+admin.peers
