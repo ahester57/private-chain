@@ -21,3 +21,4 @@ admin.peers
 eth.blockNumber
 admin.peers
 web3.fromWei(eth.getBalance(eth.coinbase))
+admin.peers

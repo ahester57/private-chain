@@ -53,3 +53,13 @@ var ChainMessage = loadChainMessage()
 ChainMessage.getMessage(eth.coinbase)
 ChainMessage
 admin.peers
+loadScript('scripts/loadChainMessage.js')
+var ChainMessage = loadChainMessage()
+ChainMessage.getMessage(eth.coinbase)
+admin.peers
+ChainMessage.getMessage(eth.coinbase)
+ChainMessage.clearMessage()
+ChainMessage.clearMessage(eth.coinbase)
+ChainMessage.clearMessage(eth.coinbase, {from: eth.coinbase})
+ChainMessage.getMessage(eth.coinbase)
+ChainMessage

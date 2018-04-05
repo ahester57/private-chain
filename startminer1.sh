@@ -13,7 +13,8 @@ geth --identity "miner1" --networkid $NETWORK_ID \
      --nodiscover --port $PORT --rpc --rpcport $RPCPORT \
      --rpcapi "db,eth,web3,net,personal,miner" \
      --unlock 0 --password $CURR/miner1/passwd.sec \
- 	--preload "$CURR/scripts/mine_on_demand.js" console
+ 	--preload "$CURR/scripts/mine_on_demand.js, \
+	$CURR/scripts/loadChainMessage.js" console
 else
 	echo "Initialize first"
 fi
