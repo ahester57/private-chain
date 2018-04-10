@@ -40,9 +40,11 @@ web3.eth.net.getId().then(function(networdId) {
 			var from = info._from;
 			var to = info._to;
 			var msg = info._msg;
+			var blockNum = log.blockNumber;
 			console.log("from: ", from);
 			console.log("to: ", to);
 			console.log("msg: ", msg);
+			console.log("block: ", blockNum);
 		}).on('changed', function(log) {
 			console.log(log);
 		}).on('error', function(log) {
