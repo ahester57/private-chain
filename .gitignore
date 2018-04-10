@@ -18,3 +18,5 @@ sync.html
 .testnode/*
 testnode/*
 testnode/*/*
+node/node_modules
+node/package-lock.json
