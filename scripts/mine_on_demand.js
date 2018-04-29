@@ -11,7 +11,7 @@ function checkWork() {
 			var tx = eth.getTransaction(pending[i]);
 			var input = tx.input;
 			if (input != '0x') {
-				until = currentblock + 1;
+				until = currentblock + 2;
 			}
 		}
 		if (until != currentblock + 1) {
