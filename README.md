@@ -6,10 +6,10 @@ some example Smart Contracts and documentation about geth and truffle.
 
 ### Prerequisites
 
-	> go-ethereum-1.8.2-stable (geth)
-	> go-1.8+
+	> go-ethereum-1.8.x+-stable (geth)
+	> go-1.10+
 	> nodejs@9.x
-	> truffle@4.1.x+
+	> truffle@4.1.19+
 	> [optional] Mist browser
 	
 ### Installation
@@ -19,11 +19,11 @@ go-ethereum:
 Follow instructions at https://github.com/ethereum/go-ethereum   
 Get the latest stable release from their releases page and build from source.
 
-go.1.8+:
+go.1.10+:
 
 	> sudo add-apt-repository ppa:gophers/archive
 	> sudo apt update
-	> sudo apt install golang-1.[8|9|10]-go
+	> sudo apt install golang-1.10-go
 	> echo "PATH=/usr/lib/go-1.x/bin:$PATH" >> ~/.bashrc
 	> source ~/.bashrc
 
@@ -124,7 +124,7 @@ Open a new terminal window,
 Truffle is a development environment for writing smart contracts 
 for the Ethereum Virtual Machine.
 
-I have a PDF about testing and scripting with truffle in ./docs of this repository.
+I have a PDF about testing and scripting with truffle in ./docs of this repository [outdated].
 
 Check it out at
 
